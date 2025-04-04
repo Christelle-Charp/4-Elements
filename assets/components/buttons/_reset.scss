@@ -3,7 +3,7 @@
 @use "../../abstracts/colors" as *;
 
 .reset-btn {
-    background-color: #6A3335;
+    background-color: $danger-color;
     padding: 7px 14px;
     color: #ffffff;
     font-size: 1.875rem;

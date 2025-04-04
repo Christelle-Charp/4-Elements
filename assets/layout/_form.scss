@@ -20,6 +20,14 @@ input, select {
     padding-left: 1rem;
 }
 
+.error-box {
+    font-family: 'Karla-Regular';
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 100%;
+    color: $danger-color;
+}
+
 
 #searchForm {
     background-color: $tertiary-color;
@@ -49,6 +57,8 @@ input, select {
             line-height: 100%;
             color: $primary-color;
         }
+
+        
 
         input, select {
             background-color: $input-color;
@@ -138,6 +148,16 @@ input, select {
                 width: 20px;
                 height: 20px;
                 margin-right: 1rem;
+            }
+
+            #dietSection{
+                @include d-flex-column-start;
+                gap: 1rem;
+            }
+
+            #allergySection{
+                @include d-flex-column-start;
+                gap: 1rem;
             }
         
     }

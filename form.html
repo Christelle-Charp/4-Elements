@@ -66,12 +66,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="lodging">
+                <div id="lodging" class="lodging">
                     <h4>Votre hebergement</h4>
                     <div class="align">
                         <div class="hotel label-align">
                             <label for="hotel">Choisir un hotel :</label>
                                 <select name="hotel" id="hotel">
+                                    <option value="choix">Votre Hotel</option>
                                     <option value="feu">Hôtel Feu</option>
                                     <option value="terre">Hôtel Terre</option>
                                     <option value="eau">Hôtel Eau</option>
@@ -110,11 +111,11 @@
                     <div class="align">
                         <div class="label-align">
                             <label for="arrivee">Date d'arrivée</label>
-                            <input type="date" id="arrivee">
+                            <input type="date" id="arrival">
                         </div>
                         <div class="label-align">
                             <label for="depart">Date de départ</label>
-                            <input type="date" id="depart">
+                            <input type="date" id="departure">
                         </div>
                     </div>
                     <div id="datesError" class="error-box"></div>
@@ -169,13 +170,16 @@
             </form>
         </div>
     </div>
-    <div class="modal-facture">
+    <div class="modal-facture" style="display:none;">
         <div class="container-facture">
-            <div id="summaryContainer"></div>
+            <div id="summaryContainer">
+            </div>
         </div>
-    </div>
-    
-    
+    </div>  
+    <div class="modal-payement" style="display:none;">
+        <div id="payementBox" class="container-payement">
+        </div>
+    </div>  
 </body>
     <script src="script.js"></script>
 </html>
