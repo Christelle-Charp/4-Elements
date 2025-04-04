@@ -1,0 +1,16 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as *;
+
+.reset-btn {
+    background-color: #6A3335;
+    padding: 7px 14px;
+    color: #ffffff;
+    font-size: 1.875rem;
+    line-height: 100%;
+    font-family: 'Karla-Regular';
+    border-radius: 6px;
+    text-transform: capitalize;
+}
+
+

@@ -1,0 +1,95 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.hotels {
+    .row {
+        margin-top: 18rem;
+
+        .hotel-card:first-of-type, .hotel-card:nth-of-type(3) {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-left: 20rem;
+        }
+    }
+}
+
+.presentation {
+    .container {
+        width: 75%;
+        margin: auto;
+
+        .row {
+            margin-top: 10rem;
+            @include d-flex;
+            justify-content: space-between;
+
+            article {
+                width: 30rem;
+                @include d-flex-column-start;
+                gap: 2rem;
+
+                .content {
+                    @include d-flex-column-start;
+                    gap: 1.5rem;
+                }
+                &:nth-of-type(2) {
+                    .content{
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.createur {
+    .container {
+        width: 75%;
+        margin: auto;
+
+        .row {
+            margin-top: 10rem;
+
+            article {
+                @include d-flex-column-start;
+                gap: 2rem;
+
+                .content {
+                    @include d-flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    width: 100%;
+                    gap: 3rem;
+
+                    img {
+                        object-fit: cover;
+                        width: 30rem;
+                    }
+
+                    .text{
+                        @include d-flex-column-start;
+                        width: 30rem;
+                        gap: 2rem;
+
+                        .paragraph {
+                            display: flex;
+                            flex-direction: column;
+                            img {
+                                width: 120px;
+                            }
+                        }
+
+                        .signature {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    
+                    }
+
+                    
+                }
+                
+            }
+        }
+    }
+}

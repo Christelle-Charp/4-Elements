@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+body {
+    background-color: $background-color;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Karla-Regular';
+    font-size: 1.25rem;
+    line-height: 100%;
+    color: $primary-color;
+    text-transform: capitalize;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-family: 'PlayfairDisplay-Medium';
+    font-size: 6.25rem;
+    line-height: 100%;
+    color: $tertiary-color;
+    text-align: right;
+}
+
+h2 {
+    font-family: 'PlayfairDisplay-Medium';
+    font-size: 6rem;
+    line-height: 100%;
+    color: $primary-color;
+}
+
+h3 {
+    font-family: 'PlayfairDisplay-Bold';
+    font-size: 3rem;
+    line-height: 100%;
+    color: $primary-color;
+}
+
+h4 {
+    font-family: 'PlayfairDisplay-Bold';
+    font-size: 1.875rem;
+    line-height: 100%;
+    color: $primary-color;
+}
+
+p {
+    font-family: 'Karla-Regular';
+    font-size: 1.25rem;
+    line-height: 100%;
+    color: $primary-color;
+}
+
+.legend {
+    font-family: 'Karla-Regular';
+    font-size: 1rem;
+    line-height: 100%;
+    color: $primary-color;
+}
+

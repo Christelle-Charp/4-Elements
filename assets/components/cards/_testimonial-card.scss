@@ -1,0 +1,30 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as *;
+
+.testimonial-card {
+    @include d-flex-column-start;
+    gap: 1.5rem;
+    width: 30rem;
+
+    .title-card {
+        @include d-flex;
+        align-items: center;
+        gap: 1rem;
+
+        > img {
+            width: 56px;
+        }
+        .client {
+            @include d-flex-column-start;
+            gap: rem;
+
+            .avis-client {
+                @include d-flex;
+                align-items: center;
+                gap: 0.5rem;
+                
+            }
+        }
+    }
+}

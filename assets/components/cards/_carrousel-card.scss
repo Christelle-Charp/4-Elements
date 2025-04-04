@@ -1,0 +1,44 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as *;
+
+.carrousel-card{
+    min-width: 488px;
+    position: relative;
+
+    img {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(041, 045, 037, 0.28); 
+        z-index: 1; 
+    }
+
+    .carrousel-card-content {
+        position: absolute;
+        height: 45%;
+        width: 70%;
+        top: 45%;
+        left: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        z-index: 2;
+        
+        
+        h4, p {
+            color: $background-color;
+            text-align: right;
+        }
+    }
+    
+
+}

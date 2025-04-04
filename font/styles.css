@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Karla-Bold';
+    src: url(karla/Karla-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Karla-Regular';
+    src: url(karla/Karla-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Bold';
+    src: url(playfair_display/PlayfairDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Medium';
+    src: url(playfair_display/PlayfairDisplay-Medium.ttf);
+}

@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+.carrousel {
+    overflow: hidden;
+    width: 100%;
+
+    .carrousel-box {
+        display: flex;
+        gap: 4rem;
+        overflow-x: auto; /* Activer le défilement horizontal */
+        scroll-behavior: smooth; /* Pour un défilement fluide */
+        scrollbar-width: thin;
+        scrollbar-color: $background-color $input-color;
+        
+    }
+}

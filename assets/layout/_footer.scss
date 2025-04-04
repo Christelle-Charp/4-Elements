@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+footer {
+    background-color: #ffffff;
+    .container {
+        width: 88%;
+        margin: auto;
+
+        .row {
+            margin-top: 10rem;
+            padding-top: 2rem;
+            @include d-flex;
+            justify-content: space-between;
+
+            .logo-footer {
+                //flex: 1 1 20%;
+                width: 25%;
+                @include d-flex-column-start;
+                gap: 1.5rem;
+
+                .logo{
+                    width: 200px;
+                }
+
+                .reseau {
+                    ul {
+                        @include d-flex;
+                        gap: 1rem;
+                    }
+                }
+
+            }
+
+            .contact-footer{
+                //flex: 1 1 20%;
+                width: 25%;
+                @include d-flex-column-start;
+                gap: 1.5rem;
+                padding-left: 2rem;
+
+                .adress-footer {
+                    @include d-flex-column-start;
+                    gap: 1rem;
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .ml-footer {
+                width: 25%;
+                display: flex;
+                ul{
+                    width: 100%;
+                    padding-left: 2rem;
+                    //flex: 1 1 20%;
+                    @include d-flex-column-start;
+                }
+                
+            }
+        }
+    }
+}

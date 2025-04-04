@@ -1,0 +1,159 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+header {
+    height: 4.5rem;
+
+    @media screen and (max-width: 850px) {
+        height: 2rem;
+
+        .row {
+            @include d-flex-column;
+
+            .menu-burger {
+                transform: translateY(-1500px);
+            }
+
+            .navbar {
+                @include d-flex-column;
+                position: absolute;
+                top: 5%;
+                z-index: 100;
+                
+
+                nav {
+                    ul {
+                        @include d-flex-column;
+                        position: absolute;
+                        z-index: 100;
+                        
+                    }
+                }
+            }
+
+            .contact {
+                position: absolute;
+                top: 28%;
+                z-index: 100;
+            }
+
+            .reseau {
+                width: 80%;
+                margin: auto;
+                @include d-flex;
+                gap: 1.5rem;
+                align-items: center;
+                justify-content: space-between;
+
+                .burger {
+                    width: 2rem;
+                    height: 2rem;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    z-index: 100;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 1.8rem;
+                        height: 2px;
+                        background-color: $primary-color;
+                        box-shadow: 0 10px 0 $primary-color;
+                        transform: translateY(-10px);
+
+                    }
+
+                    &.active::after {
+                        box-shadow: 0 0 0 $primary-color;
+                        transform: rotate(45deg);
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 1.8rem;
+                        height: 2px;
+                        background-color: $primary-color;
+                        transform: translateY(10px);
+                        
+                    }
+
+                    &.active::before {
+                        transform: rotate(-45deg);
+                    }
+
+
+                    
+                }
+            }
+
+            .connexion {
+                @include d-flex-column;
+                position: absolute;
+                top: 32%;
+                z-index: 100;
+            }
+
+        }
+
+            
+        
+    }
+    .container {
+        width: 90%;
+        margin: auto;
+        .row {
+            margin-top: 0.5rem;
+            @include d-flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .navbar {
+                @include d-flex;
+                gap: 3rem;
+                align-items: center;
+    
+                .logo {
+                    a {
+                        img {
+                            height: 53px;
+                        }
+                    }
+                }
+    
+                nav {
+                    ul {
+                        @include d-flex;
+                        gap: 1.5rem;
+                    }
+                }
+            }
+    
+           
+    
+            .reseau {
+                ul {
+                    @include d-flex;
+                    gap: 1.5rem;
+                    align-items: center;
+                a {
+                    img {
+                        height: 22px;
+                    }
+                }
+                }
+            }
+
+            .connexion {
+                @include d-flex;
+                gap: 1.5rem;
+                align-items: center;
+            }
+            
+        }
+    }
+    
+}

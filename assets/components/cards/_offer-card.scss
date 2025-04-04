@@ -1,0 +1,47 @@
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/colors" as *;
+
+.offer-card {
+    width: 30rem;
+    @include d-flex-column-start;
+    gap: 3rem;
+
+    > img {
+        height: 432px;
+        object-fit: cover;
+    }
+
+    .content-card {
+        @include d-flex-column-start;
+        gap: 1.5rem;
+
+        .picto-card {
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                text-transform: lowercase;
+            }
+            div {
+                display: flex;
+                align-items: center;
+                width: 45%;
+                gap: 1rem;
+                padding-bottom: 1rem;
+
+                img {
+                    width: 30px;
+                }
+            }
+
+            
+        }
+        .cta {
+            @include d-flex-column-start;
+            gap: 2rem;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,164 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+label {
+    font-family: 'Karla-Regular';
+    font-size: 1rem;
+    line-height: 100%;
+    color: $primary-color;
+}
+
+input, select {
+    background-color: $input-color;
+    height: 3.5rem;
+    color: #656366;
+    font-family: 'Karla-Regular';
+    font-size: 1rem;
+    line-height: 100%;
+    width: 12rem;
+    border-radius: 8px;
+    padding-left: 1rem;
+}
+
+
+#searchForm {
+    background-color: $tertiary-color;
+    border-radius: 18px;
+    @include d-flex-column-start;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 103%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    gap: 1rem;
+    height: 220px;
+
+    .align-input {
+        @include d-flex;
+        gap: 1rem;
+
+        div {
+            @include d-flex-column-start; 
+            gap: 0.5rem;
+        }
+
+        label {
+            font-family: 'Karla-Regular';
+            font-size: 1rem;
+            line-height: 100%;
+            color: $primary-color;
+        }
+
+        input, select {
+            background-color: $input-color;
+            height: 3.5rem;
+            color: #656366;
+            font-family: 'Karla-Regular';
+            font-size: 1rem;
+            line-height: 100%;
+            width: 12rem;
+            border-radius: 8px;
+            padding-left: 1rem;
+        }
+        
+    }
+
+    .cta {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#booking-form {
+    @include d-flex-column-start;
+    gap: 1.5rem;
+
+    input, select {
+        
+        height: 2.5rem;
+        width: 17rem;
+        
+    }
+
+    .label-align {
+        @include d-flex-column-start;
+        gap: 0.5rem;
+    }
+
+    .align {
+        @include d-flex;
+        gap: 3rem;
+    }
+
+    .customer {
+        @include d-flex-column-start;
+        gap: 1rem;
+        .name {
+            @include d-flex;
+            gap: 3rem;
+
+        }
+
+        .adress {
+            @include d-flex-column-start;
+            gap: 1rem;
+        }
+    
+        .contact {
+            @include d-flex;
+            gap: 3rem;
+        }
+    }
+
+    .lodging {
+        @include d-flex-column-start;
+        gap: 1rem;
+
+        .hotel, .nbCustumer {
+            @include d-flex-column-start;
+            gap: 0.5rem;
+        }
+    }
+
+    .dates {
+        @include d-flex-column-start;
+        gap: 1rem;
+
+    }
+
+    
+    .meal  {
+        @include d-flex-column-start;
+        gap: 1rem;
+        
+            input[type=checkbox] {
+                width: 20px;
+                height: 20px;
+                margin-right: 1rem;
+            }
+        
+    }
+
+    .services {
+        @include d-flex-column-start;
+        gap: 1rem;
+        
+            input[type=checkbox] {
+                width: 20px;
+                height: 20px;
+                margin-right: 1rem;
+            }
+        
+    }  
+    
+    .cta {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+}
