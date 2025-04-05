@@ -62,4 +62,25 @@ footer {
             }
         }
     }
+
+    @media screen and (max-width: 990px) {
+        .container {
+            .row {
+                margin-top: 5rem;
+                @include d-flex-column-start;
+                gap: 1.5rem;
+
+                .logo-footer, .contact-footer, .ml-footer {
+                    width: 100%;
+                }
+
+                .ml-footer {
+
+                ul {
+                    gap: 2rem;
+                }
+                }
+            }
+        }
+    }
 }

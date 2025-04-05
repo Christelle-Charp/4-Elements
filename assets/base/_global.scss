@@ -4,6 +4,7 @@
 
 body {
     background-color: $background-color;
+    position: relative;
 }
 
 img {
@@ -64,5 +65,35 @@ p {
     font-size: 1rem;
     line-height: 100%;
     color: $primary-color;
+}
+
+@media screen and (max-width: 990px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    .legend {
+        font-size: 0.9rem;
+    }
 }
 

@@ -2,12 +2,15 @@
 // ------------ Fonction pour afficher le menu Burger --------------------
 let burger = document.querySelector(".burger");
 let menu = document.querySelectorAll(".menu");
+let header = document.querySelector("header");
+
 //Utilisation d'une vérification si l'élément est présent sur la page pour ne pas bloquer l'execution des autres
 // fonctions si absent
 if (burger) {
     burger.addEventListener("click", function(e){
         e.preventDefault();
         burger.classList.toggle('active');
+        header.classList.toggle('open-burger');
         menu.forEach(function(item) {
             item.classList.toggle('menu-burger');
         });
@@ -39,200 +42,93 @@ if (next) {
 
 //--------------Fonction pour afficher formulaire -----------------
 let containerModals = document.getElementById("containerModals");
-function afficherFormulaire () {
-    containerModals.style.display = "block";
-    
-    containerModals.innerHTML = `
-    <div class="modal-booking">
-            <div class="container-form">
-                <button onclick="fermerModal()" id="btnClose" class="close">X</button>
-                <form id="booking-form">
-                    <h3>Réservation</h3>
-                    <div class="customer">
-                        <h4>Vous</h4>
-                        <div class="name">
-                            <div class="label-align">
-                                <label for="prenom">Prénom :</label>
-                                <input type="text" name="prenom" id="firstname">
-                                <div id="firstnameError" class="error-box"></div>
-                            </div>
-                            <div class="label-align">
-                                <label for="nom">Nom :</label>
-                                <input type="text" name="nom" id="name">
-                                <div id="nameError" class="error-box"></div>
-                            </div>
-                        </div>
-                        <div class="adress">
-                            <div class="align">
-                                <div class="label-align">
-                                    <label for="nbStreet">Numero de rue :</label>
-                                    <input type="number" name="nbStreet" id="nbStreet">
-                                    <div id="nbStreetError" class="error-box"></div>
-                                </div>
-                                <div class="label-align">
-                                    <label for="street">Rue :</label>
-                                    <input type="text" name="street" id="street">
-                                    <div id="streetError" class="error-box"></div>
-                                </div>
-                            </div>
-                            <div class="align">
-                                <div class="label-align">
-                                    <label for="cp">Code postal :</label>
-                                    <input type="number" name="cp" id="cp">
-                                    <div id="cpError" class="error-box"></div>
-                                </div>
-                                <div class="label-align">
-                                    <label for="city">Ville :</label>
-                                    <input type="text" name="city" id="city">
-                                    <div id="cityError" class="error-box"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact">
-                            <div class="label-align">
-                                <label for="email">Email :</label>
-                                <input type="email" name="email" id="email">
-                                <div id="emailError" class="error-box"></div>
-                            </div>
-                            <div class="label-align">
-                                <label for="phone">Telephone :</label>
-                                <input type="text" name="phone" id="phone">
-                                <div id="phoneError" class="error-box"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="lodging" class="lodging">
-                        <h4>Votre hebergement</h4>
-                        <div class="align">
-                            <div class="hotel label-align">
-                                <label for="hotel">Choisir un hotel :</label>
-                                    <select name="hotel" id="hotel">
-                                        <option value="choix">Votre Hotel</option>
-                                        <option value="feu">Hôtel Feu</option>
-                                        <option value="terre">Hôtel Terre</option>
-                                        <option value="eau">Hôtel Eau</option>
-                                        <option value="air">Hôtel Air</option>
-                                    </select>
-                                
-                                <div id="hotelError" class="error-box"></div>
-                            </div>
-                            <div id="ChoiceFeu" class="room label-align" style="display:none;">
-                                <label for="roomFeu">Choisir un logement :</label>
-                                    <select name="roomFeu" id="roomFeu">
-                                        <option value="igloo">Igloo privé</option>
-                                        <option value="suite">Suite Laponne</option>
-                                    </select>
-                                
-                                <div id="roomFeuError" class="error-box"></div>
-                            </div>
-                            <div id="ChoiceOther" class="room label-align" style="display:none;">
-                                <label for="roomOther">Choisir un logement :</label>
-                                    <select name="roomOther" id="roomOther">
-                                        <option value="chambre">Chambre</option>
-                                        <option value="suite">Suite</option>
-                                    </select>
-                                
-                                <div id="roomOther" class="error-box"></div>
-                            </div>
-                        </div>
-                        <div class="nbCustumer label-align">
-                            <label for="nb-personne">Nbre de personne :</label>
-                            <input type="number" name="nb-personne" id="nbPersonne">
-                            <div id="nbPersonneError" class="error-box"></div>
-                        </div>
-                    </div>
-                    <div class="dates">
-                        <h4>Vos dates</h4>
-                        <div class="align">
-                            <div class="label-align">
-                                <label for="arrivee">Date d'arrivée</label>
-                                <input type="date" id="arrival">
-                            </div>
-                            <div class="label-align">
-                                <label for="depart">Date de départ</label>
-                                <input type="date" id="departure">
-                            </div>
-                        </div>
-                        <div id="datesError" class="error-box"></div>
-                    </div>
-                    <div class="meal">
-                        <h4>Vos repas</h4>
-                        <div class="align">
-                            <div class="label-align">
-                                <label for="breakfast"><input type="checkbox" value="breakfast" id="breakfast">Petit Déjeuner</label>
-                                <label for="lunch"><input type="checkbox" value="lunch" id="lunch">Déjeuner</label>
-                                <label for="dinner"><input type="checkbox" value="dinner" id="dinner">Dîner</label>
-                                <label for="ponctuel"><input type="checkbox" value="ponctuel" id="ponctuel">Ponctuel</label>
-                            </div>
-                            <div id="dietSection" style="display:none;">
-                                <h5>Vos préférences alimentaires</h5>
-                                <div class="label-align">
-                                    <label for="diet">Ce que vous souhaitez nous préciser: </label>
-                                    <select name="diet" id="diet">
-                                        <option value="vegan">Vegan</option>
-                                        <option value="vegetarien">Vegetarien</option>
-                                        <option value="none">Aucun</option>
-                                    </select>
-                                </div>
-                                <div id="dietError" class="error-box"></div>
-                            </div>
-                            <div id="allergySection" style="display:none;">
-                                <h5>Vos restrictions alimentaires</h5>
-                                <div class="label-align">
-                                    <label for="allergy">Ce que vous souhaitez nous préciser: </label>
-                                    <select name="allergy" id="allergy">
-                                        <option value="gluten">Sans gluten</option>
-                                        <option value="lactose">Sans lactose</option>
-                                        <option value="allergy">autres allergies et intolérances</option>
-                                        <option value="none">Aucune</option>
-                                    </select>
-                                </div>
-                                <div id="allergyError" class="error-box"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services">
-                        <h4>Envie de +</h4>
-                        <div class="label-align">
-                            <label for="driver"><input type="checkbox" value="driver" id="driver">Chauffeur</label>
-                            <label for="visite"><input type="checkbox" value="visite" id="visite">Visite du domaine</label>
-                        </div>
-                    </div>
-                    <div class="cta">
-                        <button class="reset-btn" type="reset">Annuler</button>
-                        <button class="primary-btn" type="submit">Réserver</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="modal-facture" style="display:none;">
-            <div class="container-facture">
-                <div id="summaryContainer">
-                </div>
-            </div>
-        </div>  
-        <div class="modal-payement" style="display:none;">
-            <div id="payementBox" class="container-payement">
-            </div>
-        </div>  
-    `;
-    if (breakfastCheckbox || lunchCheckbox || dinnerCheckbox || ponctuelCheckbox) {
-        document.getElementById("breakfast").addEventListener("change", toggleDiet);
-        document.getElementById("lunch").addEventListener("change", toggleDiet);
-        document.getElementById("dinner").addEventListener("change", toggleDiet);
-        document.getElementById("ponctuel").addEventListener("change", toggleDiet);
-    };
-}
 
-function fermerModal() {
+
+/*function fermerModal() {
     containerModals.style.display = "none";
-}
+}*/
 
-document.querySelectorAll(".reservation").forEach(function(element){
-    element.addEventListener("click", afficherFormulaire);
+/*document.querySelectorAll(".reservation").forEach(function(element){
+    element.addEventListener("click", function(){
+        fetch("pages/form.html")
+            .then(function(reponse) {
+                if (!reponse.ok) {
+                    throw new Error("Erreur : le formulaire n’a pas pu être chargé.");
+                }
+                console.log("formulaire chargé");
+                return reponse.text();
+            })
+
+            .then(function(form){
+                containerModals.innerHTML = form;
+                console.log(form);
+
+                // ---- Ecoute des évenements sur le formulaire----------
+
+                //---------- Pour toggle -------------
+                //---------- diet------------
+                let dietSection = document.getElementById("dietSection");
+                let breakfastCheckbox = document.getElementById("breakfast");
+                let lunchCheckbox = document.getElementById("lunch");
+                let dinnerCheckbox = document.getElementById("dinner");
+                let ponctuelCheckbox = document.getElementById("ponctuel");
+
+                if (breakfastCheckbox || lunchCheckbox || dinnerCheckbox || ponctuelCheckbox) {
+                    document.getElementById("breakfast").addEventListener("change", toggleDiet);
+                    document.getElementById("lunch").addEventListener("change", toggleDiet);
+                    document.getElementById("dinner").addEventListener("change", toggleDiet);
+                    document.getElementById("ponctuel").addEventListener("change", toggleDiet);
+                };
+                //-------------Allergy--------------
+                let allergySection = document.getElementById("allergySection");
+                if (breakfastCheckbox || lunchCheckbox || dinnerCheckbox || ponctuelCheckbox) {
+                    document.getElementById("breakfast").addEventListener("change", toggleAllergy);
+                    document.getElementById("lunch").addEventListener("change", toggleAllergy);
+                    document.getElementById("dinner").addEventListener("change", toggleAllergy);
+                    document.getElementById("ponctuel").addEventListener("change", toggleAllergy);
+                };
+
+                //--------- Pour fermer -------------
+                let btnClose = document.getElementById("btnClose");
+                let btnCancel = document.getElementById("btnCancel");
+
+                if (btnCancel) {
+                    btnCancel.addEventListener("click", closeForm);
+                };
+
+                if (btnClose) {
+                    btnClose.addEventListener("click", closeForm);
+                };
+
+                
+            })
+
+            .catch(function(error) {
+                // On affiche l'erreur dans la console du navigateur (F12 > Console)
+                console.error("Erreur : " + error.message);
+              });
+    });
 
     
-});
+});*/
+
+//---------Fonctions pour fermer formulaire ------
+let btnClose = document.getElementById("btnClose");
+let btnCancel = document.getElementById("btnCancel");
+
+if (btnCancel) {
+    btnCancel.addEventListener("click", closeForm);
+};
+
+if (btnClose) {
+    btnClose.addEventListener("click", closeForm);
+};
+
+function closeForm () {
+    document.querySelector(".modal-booking").style.display = "none";
+};
+
+
 
 // -----------Fonctions pour faire apparaitre les infos de régime alimentaire:------------------
 //Utilisation d'une vérification si l'élément est présent sur la page pour ne pas bloquer l'execution des autres
@@ -298,12 +194,12 @@ function toggleRoom (){
     let roomFeu = document.getElementById("roomFeu").value;
     let roomOther = document.getElementById("roomOther").value;
     if (hotel === "feu") {
-        ChoiceFeu.style.display = "block";
+        ChoiceFeu.style.display = "flex";
         ChoiceOther.style.display = "none";
     } 
     if (hotel === "terre" || hotel === "eau" || hotel === "air") {
         ChoiceFeu.style.display = "none";
-        ChoiceOther.style.display = "block";
+        ChoiceOther.style.display = "flex";
     }
 };
 
@@ -487,7 +383,7 @@ if (bookingForm){
         let payementBox = document.getElementById("payementBox");
         payementBox.innerHTML = `
             <h3>Reservation confirmée!</h3>
-            <button onclick="retourAccueil()" class="primary-btn">Retour à l'accueil</button>
+            <a class="primary-btn" href="../index.html"title="Une aventure sensorielle luxueuse autour des quatres éléments Terre, Air, Eau et Feu">Retour à l'accueil</a>
         `
     }
 
@@ -497,5 +393,6 @@ if (bookingForm){
         document.querySelector(".modal-booking").style.display = "none";
         payementBox.innerHTML = "";
     }
+
 }
     

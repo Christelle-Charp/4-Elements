@@ -24,7 +24,7 @@
             justify-content: space-between;
 
             article {
-                width: 30rem;
+                width: 45%;
                 @include d-flex-column-start;
                 gap: 2rem;
 
@@ -36,6 +36,21 @@
                     .content{
                         flex-direction: column-reverse;
                     }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 990px) {
+        .container {
+            width: 90%;
+
+            .row {
+                margin-top: 5rem;
+                @include d-flex-column-start;
+                gap: 2rem;
+
+                article {
+                    width: 100%;
                 }
             }
         }
@@ -63,12 +78,12 @@
 
                     img {
                         object-fit: cover;
-                        width: 30rem;
+                        width: 45%;
                     }
 
                     .text{
                         @include d-flex-column-start;
-                        width: 30rem;
+                        width: 45%;
                         gap: 2rem;
 
                         .paragraph {
@@ -87,6 +102,32 @@
                     }
 
                     
+                }
+                
+            }
+        }
+    }
+
+    @media screen and (max-width: 990px) {
+        .container {
+            width: 90%;
+
+            .row {
+                margin-top: 5rem;
+
+                article {
+                    .content {
+                        @include d-flex-column-start;
+                        width: 100%;
+                        gap: 2rem;
+                        img {
+                            width: 100%;
+                        }
+
+                        .text {
+                            width: 100%;
+                        }
+                    }
                 }
                 
             }

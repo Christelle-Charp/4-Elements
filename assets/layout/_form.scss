@@ -18,6 +18,11 @@ input, select {
     width: 12rem;
     border-radius: 8px;
     padding-left: 1rem;
+
+    @media screen and (max-width: 990px) {
+        height: 2.5rem; 
+        width: 100%;
+    }
 }
 
 .error-box {
@@ -50,27 +55,6 @@ input, select {
             @include d-flex-column-start; 
             gap: 0.5rem;
         }
-
-        label {
-            font-family: 'Karla-Regular';
-            font-size: 1rem;
-            line-height: 100%;
-            color: $primary-color;
-        }
-
-        
-
-        input, select {
-            background-color: $input-color;
-            height: 3.5rem;
-            color: #656366;
-            font-family: 'Karla-Regular';
-            font-size: 1rem;
-            line-height: 100%;
-            width: 12rem;
-            border-radius: 8px;
-            padding-left: 1rem;
-        }
         
     }
 
@@ -80,11 +64,21 @@ input, select {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    @media screen and (max-width: 990px) {
+        height: 350px;
+        padding: 1.5rem;
+
+        .align-input {
+            @include d-flex-column-start; 
+            gap: 1rem;
+        }
+    }
 }
 
 #booking-form {
     @include d-flex-column-start;
-    gap: 1.5rem;
+    gap: 1rem;
 
     input, select {
         
@@ -180,5 +174,26 @@ input, select {
         align-items: center;
         width: 100%;
         padding-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 990px) {
+        
+        .align {
+            @include d-flex-column-start;
+            gap: 1rem;
+        }
+        .customer {
+            .name {
+                @include d-flex-column-start;
+                gap: 1rem;
+            }
+
+            .contact {
+                @include d-flex-column-start;
+                gap: 1rem;
+            }
+        }
+
+        
     }
 }

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Une aventure sensorielle luxueuse autour des quatres éléments Terre, Air, Eau et Feu</title>
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="font/styles.css">
-</head>
-<body>
+        <title>Une aventure sensorielle luxueuse autour de l'élément Feu</title>
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../font/styles.css">
+    </head>
+    <body>
     <div class="modal-booking">
         <div class="container-form">
-            <button id="btnClose" class="close">X</button>
+            <a class="close" href="../index.html"title="Une aventure sensorielle luxueuse autour des quatres éléments Terre, Air, Eau et Feu">X</a>
             <form id="booking-form">
                 <h3>Réservation</h3>
                 <div class="customer">
@@ -129,30 +129,32 @@
                             <label for="dinner"><input type="checkbox" value="dinner" id="dinner">Dîner</label>
                             <label for="ponctuel"><input type="checkbox" value="ponctuel" id="ponctuel">Ponctuel</label>
                         </div>
-                        <div id="dietSection" style="display:none;">
-                            <h5>Vos préférences alimentaires</h5>
-                            <div class="label-align">
-                                <label for="diet">Ce que vous souhaitez nous préciser: </label>
-                                <select name="diet" id="diet">
-                                    <option value="vegan">Vegan</option>
-                                    <option value="vegetarien">Vegetarien</option>
-                                    <option value="none">Aucun</option>
-                                </select>
+                        <div class="label-align">
+                            <div id="dietSection" style="display:none;">
+                                <h5>Vos préférences alimentaires</h5>
+                                <div class="label-align">
+                                    <label for="diet">Ce que vous souhaitez nous préciser: </label>
+                                    <select name="diet" id="diet">
+                                        <option value="vegan">Vegan</option>
+                                        <option value="vegetarien">Vegetarien</option>
+                                        <option value="none">Aucun</option>
+                                    </select>
+                                </div>
+                                <div id="dietError" class="error-box"></div>
                             </div>
-                            <div id="dietError" class="error-box"></div>
-                        </div>
-                        <div id="allergySection" style="display:none;">
-                            <h5>Vos restrictions alimentaires</h5>
-                            <div class="label-align">
-                                <label for="allergy">Ce que vous souhaitez nous préciser: </label>
-                                <select name="allergy" id="allergy">
-                                    <option value="gluten">Sans gluten</option>
-                                    <option value="lactose">Sans lactose</option>
-                                    <option value="allergy">autres allergies et intolérances</option>
-                                    <option value="none">Aucune</option>
-                                </select>
+                            <div id="allergySection" style="display:none;">
+                                <h5>Vos restrictions alimentaires</h5>
+                                <div class="label-align">
+                                    <label for="allergy">Ce que vous souhaitez nous préciser: </label>
+                                    <select name="allergy" id="allergy">
+                                        <option value="gluten">Sans gluten</option>
+                                        <option value="lactose">Sans lactose</option>
+                                        <option value="allergy">autres allergies et intolérances</option>
+                                        <option value="none">Aucune</option>
+                                    </select>
+                                </div>
+                                <div id="allergyError" class="error-box"></div>
                             </div>
-                            <div id="allergyError" class="error-box"></div>
                         </div>
                     </div>
                 </div>
@@ -164,7 +166,7 @@
                     </div>
                 </div>
                 <div class="cta">
-                    <button class="reset-btn" type="reset">Annuler</button>
+                    <a class="reset-btn" href="../index.html"title="Une aventure sensorielle luxueuse autour des quatres éléments Terre, Air, Eau et Feu">Annuler</a>
                     <button class="primary-btn" type="submit">Réserver</button>
                 </div>
             </form>
@@ -181,5 +183,5 @@
         </div>
     </div>  
 </body>
-    <script src="script.js"></script>
+<script src="../script.js"></script>
 </html>
