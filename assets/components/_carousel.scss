@@ -13,6 +13,10 @@
         scroll-behavior: smooth; /* Pour un défilement fluide */
         scrollbar-width: thin;
         scrollbar-color: $background-color $input-color;
+
+        @media screen and (max-width: 990px) {
+            gap: 2rem;
+        }
         
     }
 }

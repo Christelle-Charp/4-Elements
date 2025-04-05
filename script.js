@@ -1,21 +1,69 @@
 
-// ------------ Fonction pour afficher le menu Burger --------------------
-let burger = document.querySelector(".burger");
-let menu = document.querySelectorAll(".menu");
-let header = document.querySelector("header");
 
-//Utilisation d'une vérification si l'élément est présent sur la page pour ne pas bloquer l'execution des autres
-// fonctions si absent
-if (burger) {
-    burger.addEventListener("click", function(e){
-        e.preventDefault();
-        burger.classList.toggle('active');
-        header.classList.toggle('open-burger');
-        menu.forEach(function(item) {
-            item.classList.toggle('menu-burger');
-        });
+
+// --------- Fonctions pour inverser les images ------------
+
+let imgsFeu = document.querySelectorAll(".img-feu");
+
+imgsFeu.forEach(function(imgFeu){
+    imgFeu.addEventListener("click", function() {
+        let big = imgFeu.querySelector(".big");
+        let small = imgFeu.querySelector(".small");
+
+        big.classList.remove('big');
+        big.classList.add('small');
+
+        small.classList.remove('small');
+        small.classList.add('big');
     });
-};
+});
+
+
+
+let imgsAir = document.querySelectorAll(".img-air");
+
+imgsAir.forEach(function(imgAir){
+    imgAir.addEventListener("click", function() {
+        let big = imgAir.querySelector(".big");
+        let small = imgAir.querySelector(".small");
+
+        big.classList.remove('big');
+        big.classList.add('small');
+
+        small.classList.remove('small');
+        small.classList.add('big');
+    });
+});
+
+let imgsTerre = document.querySelectorAll(".img-terre");
+
+imgsTerre.forEach(function(imgTerre){
+    imgTerre.addEventListener("click", function() {
+        let big = imgTerre.querySelector(".big");
+        let small = imgTerre.querySelector(".small");
+
+        big.classList.remove('big');
+        big.classList.add('small');
+
+        small.classList.remove('small');
+        small.classList.add('big');
+    });
+});
+
+let imgsEau = document.querySelectorAll(".img-eau");
+
+imgsEau.forEach(function(imgEau){
+    imgEau.addEventListener("click", function() {
+        let big = imgEau.querySelector(".big");
+        let small = imgEau.querySelector(".small");
+
+        big.classList.remove('big');
+        big.classList.add('small');
+
+        small.classList.remove('small');
+        small.classList.add('big');
+    });
+});
 
 
 //------------les 2 fonctions suivantes permettent de gérer le scroll des carrousels-----------------
@@ -395,4 +443,22 @@ if (bookingForm){
     }
 
 }
+
+// ------------ Fonction pour afficher le menu Burger --------------------
+let burger = document.querySelector(".burger");
+let menu = document.querySelectorAll(".menu");
+let header = document.querySelector("header");
+
+//Utilisation d'une vérification si l'élément est présent sur la page pour ne pas bloquer l'execution des autres
+// fonctions si absent
+if (burger) {
+    burger.addEventListener("click", function(e){
+        e.preventDefault();
+        burger.classList.toggle('active');
+        header.classList.toggle('open-burger');
+        menu.forEach(function(item) {
+            item.classList.toggle('menu-burger');
+        });
+    });
+};
     

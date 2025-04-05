@@ -3,7 +3,7 @@
 @use "../../abstracts/colors" as *;
 
 .offer-card {
-    width: 30rem;
+    width: 45%;
     @include d-flex-column-start;
     gap: 3rem;
 
@@ -43,5 +43,11 @@
                 font-weight: bold;
             }
         }
+    }
+
+    @media screen and (max-width: 990px) {
+
+        width: 100%;
+        
     }
 }

@@ -578,15 +578,14 @@ input, select {
 .hotel-card {
   margin-top: 6.875rem;
   display: flex;
-  gap: 10rem;
-  width: 88%;
+  justify-content: space-between;
+  width: 100%;
   height: 35rem;
 }
 .hotel-card .img-card {
   display: flex;
-  gap: 1rem;
-  width: 60%;
-  min-width: 689px;
+  gap: 1.5rem;
+  width: 55%;
   overflow: hidden;
 }
 .hotel-card .img-card .container-img {
@@ -594,8 +593,16 @@ input, select {
 }
 .hotel-card .img-card .container-img img {
   width: 100%;
-  min-width: 400px;
+  min-width: 350px;
   object-fit: cover;
+}
+.hotel-card .img-card .big {
+  width: 65%;
+  height: 100%;
+}
+.hotel-card .img-card .small {
+  width: 30%;
+  height: 100%;
 }
 .hotel-card .encart-card {
   display: flex;
@@ -620,9 +627,33 @@ input, select {
   justify-items: flex-start;
   gap: 0.5rem;
 }
+@media screen and (max-width: 990px) {
+  .hotel-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 5rem;
+    height: 55rem;
+  }
+  .hotel-card .img-card {
+    width: 100%;
+    height: 55%;
+  }
+  .hotel-card .img-card img {
+    height: 432px;
+  }
+  .hotel-card .encart-card {
+    width: 100%;
+    gap: 2rem;
+    height: 45%;
+  }
+}
 
 .offer-card {
-  width: 30rem;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -667,6 +698,11 @@ input, select {
 .offer-card .content-card .cta span {
   font-weight: bold;
 }
+@media screen and (max-width: 990px) {
+  .offer-card {
+    width: 100%;
+  }
+}
 
 .carrousel-card {
   min-width: 488px;
@@ -701,6 +737,12 @@ input, select {
   color: #E5E0DC;
   text-align: right;
 }
+@media screen and (max-width: 990px) {
+  .carrousel-card {
+    min-width: 350px;
+    width: 100%;
+  }
+}
 
 .carrousel {
   overflow: hidden;
@@ -714,6 +756,11 @@ input, select {
   scrollbar-width: thin;
   scrollbar-color: #E5E0DC #E1D2C2;
 }
+@media screen and (max-width: 990px) {
+  .carrousel .carrousel-box {
+    gap: 2rem;
+  }
+}
 
 .testimonial-card {
   display: flex;
@@ -721,7 +768,7 @@ input, select {
   justify-content: space-around;
   align-items: start;
   gap: 1.5rem;
-  width: 30rem;
+  width: 45%;
 }
 .testimonial-card .title-card {
   display: flex;
@@ -742,6 +789,11 @@ input, select {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+@media screen and (max-width: 990px) {
+  .testimonial-card {
+    width: 100%;
+  }
 }
 
 .modal-booking {
@@ -878,7 +930,28 @@ input, select {
 .hotels .row .hotel-card:first-of-type, .hotels .row .hotel-card:nth-of-type(3) {
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 20rem;
+  margin-left: 8rem;
+}
+@media screen and (max-width: 990px) {
+  .hotels {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .hotels .container {
+    width: 95%;
+  }
+  .hotels .container .hotel-card:first-of-type, .hotels .container .hotel-card:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 2rem;
+    margin-left: 0;
+  }
+  .hotels .container .hotel-card:nth-of-type(2) .container-img, .hotels .container .hotel-card:nth-of-type(4) .container-img {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .presentation .container {
@@ -996,10 +1069,33 @@ header {
   box-shadow: 0 4px 0 rgba(100, 98, 98, 0.3);
 }
 
-.hotel-feu .hotel-card {
+.hotel-feu {
+  display: flex;
+  justify-content: flex-end;
+}
+.hotel-feu .container {
+  width: 90%;
+}
+.hotel-feu .container .row .hotel-card {
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 12rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 990px) {
+  .hotel-feu .container {
+    width: 95%;
+  }
+  .hotel-feu .container .row {
+    margin-top: 5rem;
+  }
+  .hotel-feu .container .row .hotel-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 3rem;
+    justify-content: flex-start;
+  }
 }
 
 .offre-hotel-feu .container {
@@ -1019,7 +1115,30 @@ header {
   justify-content: space-between;
   width: 100%;
 }
+@media screen and (max-width: 990px) {
+  .offre-hotel-feu .container {
+    width: 90%;
+  }
+  .offre-hotel-feu .container .row {
+    margin-top: 5rem;
+  }
+  .offre-hotel-feu .container .row .container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+    gap: 2rem;
+  }
+}
 
+.sup-hotel-feu {
+  display: flex;
+  justify-content: flex-end;
+}
+.sup-hotel-feu .container {
+  width: 90%;
+}
 .sup-hotel-feu .container .row {
   margin-top: 10rem;
   display: flex;
@@ -1027,9 +1146,25 @@ header {
   justify-content: space-around;
   align-items: start;
   gap: 3rem;
-  margin-left: 12rem;
+}
+@media screen and (max-width: 990px) {
+  .sup-hotel-feu .container {
+    width: 95%;
+  }
+  .sup-hotel-feu .container .row {
+    margin-top: 5rem;
+    gap: 2rem;
+    width: 100%;
+  }
 }
 
+.activities-hotel-feu {
+  display: flex;
+  justify-content: flex-end;
+}
+.activities-hotel-feu .container {
+  width: 90%;
+}
 .activities-hotel-feu .container .row {
   margin-top: 10rem;
   display: flex;
@@ -1037,7 +1172,16 @@ header {
   justify-content: space-around;
   align-items: start;
   gap: 3rem;
-  margin-left: 12rem;
+}
+@media screen and (max-width: 990px) {
+  .activities-hotel-feu .container {
+    width: 95%;
+  }
+  .activities-hotel-feu .container .row {
+    margin-top: 5rem;
+    gap: 2rem;
+    width: 100%;
+  }
 }
 
 .video-hotel-feu .row {
@@ -1047,6 +1191,14 @@ header {
   width: 100%;
   height: 540px;
   object-fit: fill;
+}
+@media screen and (max-width: 990px) {
+  .video-hotel-feu .row {
+    margin-top: 5rem;
+  }
+  .video-hotel-feu .row video {
+    height: 400px;
+  }
 }
 
 .testimonial-hotel-feu .container {
@@ -1065,6 +1217,23 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+@media screen and (max-width: 990px) {
+  .testimonial-hotel-feu .container {
+    width: 90%;
+  }
+  .testimonial-hotel-feu .container .row {
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+  .testimonial-hotel-feu .container .row .container-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+    gap: 2rem;
+  }
 }
 
 .info-hotel-feu .container {
@@ -1130,6 +1299,26 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: start;
+}
+@media screen and (max-width: 990px) {
+  .info-hotel-feu .container {
+    width: 90%;
+  }
+  .info-hotel-feu .container .row {
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+  .info-hotel-feu .container .row .grid-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 100%;
+    gap: 2rem;
+  }
+  .info-hotel-feu .container .row .grid-info div {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

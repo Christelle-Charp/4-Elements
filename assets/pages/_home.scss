@@ -8,9 +8,38 @@
         .hotel-card:first-of-type, .hotel-card:nth-of-type(3) {
             display: flex;
             flex-direction: row-reverse;
-            margin-left: 20rem;
+            margin-left: 8rem;
+
+            
         }
     }
+    @media screen and (max-width: 990px) {
+
+        display: flex;
+        justify-content: flex-end;
+        .container{
+            width: 95%;
+
+            .hotel-card:first-of-type, .hotel-card:nth-of-type(3) {
+                @include d-flex-column-start;
+                gap: 2rem;
+                margin-left: 0;
+            }
+
+            .hotel-card:nth-of-type(2), .hotel-card:nth-of-type(4) {
+                .container-img {
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+                
+    
+                
+            }
+        }
+        
+        
+    }
+
 }
 
 .presentation {
