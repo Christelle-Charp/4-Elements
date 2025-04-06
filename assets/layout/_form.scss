@@ -46,6 +46,7 @@ input, select {
     padding: 2rem;
     gap: 1rem;
     height: 220px;
+    z-index: 5;
 
     .align-input {
         @include d-flex;

@@ -20,6 +20,15 @@
                 z-index: 10;
             }
         }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(041, 045, 037, 0.28); 
+            z-index: 1; 
+        }
     }
 
     

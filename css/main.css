@@ -178,7 +178,7 @@ footer .container .row .ml-footer ul {
 
 .open-burger {
   height: 50vh;
-  background-color: rgba(229, 224, 220, 0.8);
+  background-color: rgba(54, 58, 43, 0.8);
 }
 
 header {
@@ -228,6 +228,7 @@ header .container .row .connexion {
 @media screen and (max-width: 990px) {
   header {
     height: 3rem;
+    background-color: transparent;
   }
   header .row {
     display: flex;
@@ -259,10 +260,16 @@ header .container .row .connexion {
     left: 40%;
     top: 60%;
   }
+  header .row .navbar nav ul li a {
+    color: #E5E0DC;
+  }
   header .row .contact {
     position: absolute;
     top: 45%;
     z-index: 100;
+  }
+  header .row .contact a {
+    color: #E5E0DC;
   }
   header .row .reseau {
     width: 80%;
@@ -273,6 +280,10 @@ header .container .row .connexion {
     justify-content: space-between;
     position: absolute;
     top: 0%;
+    color: #E5E0DC;
+  }
+  header .row .reseau ul li img {
+    filter: invert(100%) sepia(10%) hue-rotate(180deg);
   }
   header .row .reseau .burger {
     width: 2rem;
@@ -283,18 +294,19 @@ header .container .row .connexion {
     align-items: center;
     cursor: pointer;
     z-index: 100;
+    color: #E5E0DC;
   }
   header .row .reseau .burger::after {
     content: "";
     position: absolute;
     width: 1.8rem;
     height: 2px;
-    background-color: #363A2B;
-    box-shadow: 0 10px 0 #363A2B;
+    background-color: #E5E0DC;
+    box-shadow: 0 10px 0 #E5E0DC;
     transform: translateY(-10px);
   }
   header .row .reseau .burger.active::after {
-    box-shadow: 0 0 0 #363A2B;
+    box-shadow: 0 0 0 #E5E0DC;
     transform: rotate(45deg);
   }
   header .row .reseau .burger::before {
@@ -302,7 +314,8 @@ header .container .row .connexion {
     position: absolute;
     width: 1.8rem;
     height: 2px;
-    background-color: #363A2B;
+    background-color: #E5E0DC;
+    color: #E5E0DC;
     transform: translateY(10px);
   }
   header .row .reseau .burger.active::before {
@@ -336,6 +349,15 @@ header .container .row .connexion {
   transform: translateY(-50%);
   right: 5%;
   z-index: 10;
+}
+.banner .row .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(41, 45, 37, 0.28);
+  z-index: 1;
 }
 
 label {
@@ -386,6 +408,7 @@ input, select {
   padding: 2rem;
   gap: 1rem;
   height: 220px;
+  z-index: 5;
 }
 #searchForm .align-input {
   display: flex;

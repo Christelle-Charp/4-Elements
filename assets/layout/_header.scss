@@ -3,7 +3,7 @@
 
 .open-burger {
     height: 50vh;
-    background-color: rgba($background-color, 0.8)
+    background-color: rgba($primary-color, 0.8)
 }
 
 header {
@@ -11,7 +11,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;background-color: $background-color;
+    z-index: 1000;
+    background-color: $background-color;
     width: 100%;
 
     
@@ -71,7 +72,7 @@ header {
 
     @media screen and (max-width: 990px) {
         height: 3rem;
-
+        background-color: transparent;
         .row {
             @include d-flex-column;
             position: relative;
@@ -98,7 +99,13 @@ header {
                         z-index: 100;
                         left: 40%;
                         top: 60%;
-                        
+
+                        li {
+                            a{
+                                color: $background-color;
+                            }
+                        }
+                                                
                     }
                 }
             }
@@ -107,6 +114,10 @@ header {
                 position: absolute;
                 top: 45%;
                 z-index: 100;
+
+                a{
+                    color: $background-color;
+                }
             }
 
             .reseau {
@@ -118,6 +129,14 @@ header {
                 justify-content: space-between;
                 position: absolute;
                 top: 0%;
+                color: $background-color;
+                ul{
+                    li{
+                        img {
+                            filter: invert(100%) sepia(10%) hue-rotate(180deg);
+                        }
+                    }
+                }
 
                 .burger {
                     width: 2rem;
@@ -128,20 +147,21 @@ header {
                     align-items: center;
                     cursor: pointer;
                     z-index: 100;
+                    color: $background-color;
 
                     &::after {
                         content: "";
                         position: absolute;
                         width: 1.8rem;
                         height: 2px;
-                        background-color: $primary-color;
-                        box-shadow: 0 10px 0 $primary-color;
+                        background-color: $background-color;
+                        box-shadow: 0 10px 0 $background-color;
                         transform: translateY(-10px);
 
                     }
 
                     &.active::after {
-                        box-shadow: 0 0 0 $primary-color;
+                        box-shadow: 0 0 0 $background-color;
                         transform: rotate(45deg);
                     }
 
@@ -150,7 +170,8 @@ header {
                         position: absolute;
                         width: 1.8rem;
                         height: 2px;
-                        background-color: $primary-color;
+                        background-color: $background-color;
+                        color: $background-color;
                         transform: translateY(10px);
                         
                     }
