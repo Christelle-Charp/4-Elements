@@ -2,14 +2,16 @@
 
 
 // --------- Fonctions pour inverser les images ------------
-
+//Je cree une variable pour identifier la div dans laquelle se trouvent les images
 let imgsFeu = document.querySelectorAll(".img-feu");
 
+//Je fais un forEach pour lister toutes les images contenues dans la div 
 imgsFeu.forEach(function(imgFeu){
+    //Pour chaque image de la div, j'identifie celles avec les classes .big et .small 
     imgFeu.addEventListener("click", function() {
         let big = imgFeu.querySelector(".big");
         let small = imgFeu.querySelector(".small");
-
+        // Ensuite j'inverse les classes
         big.classList.remove('big');
         big.classList.add('small');
 
@@ -91,7 +93,7 @@ if (next) {
 //--------------Fonction pour afficher formulaire -----------------
 let containerModals = document.getElementById("containerModals");
 
-
+// Reflexion sur la possibilité d'intégrer le formulaire via un appel ajax. A appronfondir.
 /*function fermerModal() {
     containerModals.style.display = "none";
 }*/
@@ -158,7 +160,7 @@ let containerModals = document.getElementById("containerModals");
     });
 
     
-});*/
+});
 
 //---------Fonctions pour fermer formulaire ------
 let btnClose = document.getElementById("btnClose");
@@ -174,7 +176,7 @@ if (btnClose) {
 
 function closeForm () {
     document.querySelector(".modal-booking").style.display = "none";
-};
+};*/
 
 
 
@@ -294,6 +296,10 @@ if (bookingForm){
         let emailRegex = /^[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
         let phoneRegex = /^[0-9\s-/]{10,14}$/;
 
+        //Créer variable pour la date du jour
+        let today = new Date();
+
+
         //Faire les vérifications sur le nombre de caractères
     
         if(firstname.length < 2 || firstname.length > 50) errors.push({champs: "firstname", message: "Prénom invalide (2 à 50 caractères)"});
@@ -306,7 +312,7 @@ if (bookingForm){
         if (!phoneRegex.test(phone)) errors.push({champs: "phone", message: "Format de téléphone invalide "});
         if(hotel === "choix") errors.push({champs: "hotel", message: "Merci de choisir un hôtel"});
         if (nbPersonneValue < 1 || nbPersonneValue > 2) errors.push({champs: "nbPersonne", message: "Nombre de voyageurs incorrect (1 à 2 personnes)"});
-        if(arrival == "Invalid Date" || departure == "Invalid Date" || arrival >= departure) errors.push({champs: "dates", message: "Dates invalides"});
+        if(arrival == "Invalid Date" || departure == "Invalid Date" || arrival < today || departure < today || arrival >= departure) errors.push({champs: "dates", message: "Dates invalides"});
 
         //Calcul du prix
         const oneDay = 24 * 60 *60 * 1000;
@@ -352,12 +358,12 @@ if (bookingForm){
 
         // diet
         if (breakfastCheckbox.checked || lunchCheckbox.checked || dinnerCheckbox.checked || ponctuelCheckbox.checked ) {
-            optionSelect += `<p>Vous nous avons signalé une préférence alimentaire: ${diet}</p>`;
+            optionSelect += `<p>Vous nous avez signalé une préférence alimentaire: ${diet}</p>`;
         }
 
         // allergy
         if (breakfastCheckbox.checked || lunchCheckbox.checked || dinnerCheckbox.checked || ponctuelCheckbox.checked ) {
-            optionSelect += `<p>Vous nous avons signalé une restriction alimentaire: ${allergy}</p>`;
+            optionSelect += `<p>Vous nous avez signalé une restriction alimentaire: ${allergy}</p>`;
         }
 
         optionSelectBox.innerHTML = optionSelect;
@@ -434,13 +440,13 @@ if (bookingForm){
             <a class="primary-btn" href="../index.html"title="Une aventure sensorielle luxueuse autour des quatres éléments Terre, Air, Eau et Feu">Retour à l'accueil</a>
         `
     }
-
+    /* Cette fonction fait partie de la reflexion sur l'intégration dynamique
     function retourAccueil() {
         document.querySelector(".modal-payement").style.display = "none";
         bookingForm.reset();
         document.querySelector(".modal-booking").style.display = "none";
         payementBox.innerHTML = "";
-    }
+    }*/
 
 }
 

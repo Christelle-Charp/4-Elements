@@ -67,6 +67,10 @@ p {
     color: $primary-color;
 }
 
+.row {
+    margin-top: 10rem;
+}
+
 @media screen and (max-width: 990px) {
     h1 {
         font-size: 3.2rem;
@@ -94,6 +98,11 @@ p {
 
     .legend {
         font-size: 0.9rem;
+    }
+
+
+    .row {
+        margin-top: 5rem;
     }
 }
 

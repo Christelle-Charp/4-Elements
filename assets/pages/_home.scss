@@ -22,7 +22,7 @@
 
             .hotel-card:first-of-type, .hotel-card:nth-of-type(3) {
                 @include d-flex-column-start;
-                gap: 2rem;
+                gap: 1rem;
                 margin-left: 0;
             }
 
@@ -44,11 +44,9 @@
 
 .presentation {
     .container {
-        width: 75%;
-        margin: auto;
+        @include container-75;
 
         .row {
-            margin-top: 10rem;
             @include d-flex;
             justify-content: space-between;
 
@@ -74,7 +72,6 @@
             width: 90%;
 
             .row {
-                margin-top: 5rem;
                 @include d-flex-column-start;
                 gap: 2rem;
 
@@ -88,11 +85,9 @@
 
 .createur {
     .container {
-        width: 75%;
-        margin: auto;
+        @include container-75;
 
         .row {
-            margin-top: 10rem;
 
             article {
                 @include d-flex-column-start;
@@ -142,7 +137,6 @@
             width: 90%;
 
             .row {
-                margin-top: 5rem;
 
                 article {
                     .content {

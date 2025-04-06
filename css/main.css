@@ -70,6 +70,10 @@ p {
   color: #363A2B;
 }
 
+.row {
+  margin-top: 10rem;
+}
+
 @media screen and (max-width: 990px) {
   h1 {
     font-size: 3.2rem;
@@ -91,6 +95,9 @@ p {
   }
   .legend {
     font-size: 0.9rem;
+  }
+  .row {
+    margin-top: 5rem;
   }
 }
 footer {
@@ -312,6 +319,9 @@ header .container .row .connexion {
   }
 }
 
+.banner .row {
+  margin-top: 0;
+}
 .banner .row .video {
   position: relative;
 }
@@ -945,7 +955,7 @@ input, select {
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
-    gap: 2rem;
+    gap: 1rem;
     margin-left: 0;
   }
   .hotels .container .hotel-card:nth-of-type(2) .container-img, .hotels .container .hotel-card:nth-of-type(4) .container-img {
@@ -959,7 +969,6 @@ input, select {
   margin: auto;
 }
 .presentation .container .row {
-  margin-top: 10rem;
   display: flex;
   justify-content: space-between;
 }
@@ -986,7 +995,6 @@ input, select {
     width: 90%;
   }
   .presentation .container .row {
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1001,9 +1009,6 @@ input, select {
 .createur .container {
   width: 75%;
   margin: auto;
-}
-.createur .container .row {
-  margin-top: 10rem;
 }
 .createur .container .row article {
   display: flex;
@@ -1046,9 +1051,6 @@ input, select {
   .createur .container {
     width: 90%;
   }
-  .createur .container .row {
-    margin-top: 5rem;
-  }
   .createur .container .row article .content {
     display: flex;
     flex-direction: column;
@@ -1085,9 +1087,6 @@ header {
   .hotel-feu .container {
     width: 95%;
   }
-  .hotel-feu .container .row {
-    margin-top: 5rem;
-  }
   .hotel-feu .container .row .hotel-card {
     display: flex;
     flex-direction: column;
@@ -1103,7 +1102,6 @@ header {
   margin: auto;
 }
 .offre-hotel-feu .row {
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1118,9 +1116,6 @@ header {
 @media screen and (max-width: 990px) {
   .offre-hotel-feu .container {
     width: 90%;
-  }
-  .offre-hotel-feu .container .row {
-    margin-top: 5rem;
   }
   .offre-hotel-feu .container .row .container-card {
     display: flex;
@@ -1140,7 +1135,6 @@ header {
   width: 90%;
 }
 .sup-hotel-feu .container .row {
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1152,7 +1146,6 @@ header {
     width: 95%;
   }
   .sup-hotel-feu .container .row {
-    margin-top: 5rem;
     gap: 2rem;
     width: 100%;
   }
@@ -1166,7 +1159,6 @@ header {
   width: 90%;
 }
 .activities-hotel-feu .container .row {
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1178,24 +1170,17 @@ header {
     width: 95%;
   }
   .activities-hotel-feu .container .row {
-    margin-top: 5rem;
     gap: 2rem;
     width: 100%;
   }
 }
 
-.video-hotel-feu .row {
-  margin-top: 10rem;
-}
 .video-hotel-feu .row video {
   width: 100%;
   height: 540px;
   object-fit: fill;
 }
 @media screen and (max-width: 990px) {
-  .video-hotel-feu .row {
-    margin-top: 5rem;
-  }
   .video-hotel-feu .row video {
     height: 400px;
   }
@@ -1206,7 +1191,6 @@ header {
   margin: auto;
 }
 .testimonial-hotel-feu .row {
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1223,7 +1207,6 @@ header {
     width: 90%;
   }
   .testimonial-hotel-feu .container .row {
-    margin-top: 5rem;
     gap: 2rem;
   }
   .testimonial-hotel-feu .container .row .container-card {
@@ -1240,46 +1223,45 @@ header {
   width: 75%;
   margin: auto;
 }
-.info-hotel-feu .row {
-  margin-top: 10rem;
+.info-hotel-feu .container .row {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: start;
   gap: 3rem;
 }
-.info-hotel-feu .row .grid-info {
+.info-hotel-feu .container .row .grid-info {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-.info-hotel-feu .row .grid-info div {
+.info-hotel-feu .container .row .grid-info div {
   display: flex;
   align-items: center;
   width: 40%;
   gap: 1rem;
   padding-bottom: 1rem;
 }
-.info-hotel-feu .row .grid-info div img {
+.info-hotel-feu .container .row .grid-info div img {
   width: 30px;
 }
-.info-hotel-feu .row .grid-info div .title {
+.info-hotel-feu .container .row .grid-info div .title {
   font-weight: bold;
 }
-.info-hotel-feu .row .grid-info div .text-double {
+.info-hotel-feu .container .row .grid-info div .text-double {
   display: flex;
   gap: 0.5rem;
   width: 100%;
 }
-.info-hotel-feu .row .grid-info div .text-double .horraire {
+.info-hotel-feu .container .row .grid-info div .text-double .horraire {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: start;
   gap: 0.5rem;
 }
-.info-hotel-feu .row .grid-info div .text {
+.info-hotel-feu .container .row .grid-info div .text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1287,14 +1269,14 @@ header {
   gap: 0.5rem;
   width: 100%;
 }
-.info-hotel-feu .row .contact {
+.info-hotel-feu .container .row .contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: start;
   gap: 2rem;
 }
-.info-hotel-feu .row .contact .adress-contact {
+.info-hotel-feu .container .row .contact .adress-contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -1305,7 +1287,6 @@ header {
     width: 90%;
   }
   .info-hotel-feu .container .row {
-    margin-top: 5rem;
     gap: 2rem;
   }
   .info-hotel-feu .container .row .grid-info {

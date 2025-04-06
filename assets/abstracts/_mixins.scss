@@ -16,3 +16,12 @@
     justify-content: space-around;
     align-items: start;
 }
+
+@mixin container-75 {
+    width: 75%;
+    margin: auto;
+}
+
+@mixin container-90 {
+    width: 90%;
+}

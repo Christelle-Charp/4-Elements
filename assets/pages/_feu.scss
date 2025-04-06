@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: flex-end;
     .container {
-        width: 90%;
+        @include container-90;
         .row {
             .hotel-card {
                 display: flex;
@@ -25,7 +25,6 @@ header {
         .container {
             width: 95%;
             .row{
-                margin-top: 5rem;
                 .hotel-card {
                     @include d-flex-column-start;
                     gap: 3rem;
@@ -38,12 +37,10 @@ header {
 
 .offre-hotel-feu {
     .container {
-        width: 75%;
-        margin: auto;
+        @include container-75;
     }
 
     .row {
-        margin-top: 10rem;
         @include d-flex-column-start;
         gap: 3rem;
 
@@ -62,7 +59,6 @@ header {
             
 
             .row {
-                margin-top: 5rem;
                 .container-card {
                     @include d-flex-column-start;
                     width: 100%;
@@ -78,9 +74,8 @@ header {
     justify-content: flex-end;
 
     .container {
-        width: 90%;
+        @include container-90;
         .row {
-            margin-top: 10rem;
             @include d-flex-column-start;
             gap: 3rem;
         }
@@ -90,7 +85,6 @@ header {
         .container {
             width: 95%;
             .row {
-                margin-top: 5rem;
                 gap: 2rem;
                 
                 width: 100%;
@@ -103,9 +97,8 @@ header {
     display: flex;
     justify-content: flex-end;
     .container {
-        width: 90%;
+        @include container-90;
         .row {
-            margin-top: 10rem;
             @include d-flex-column-start;
             gap: 3rem;
         }
@@ -115,7 +108,6 @@ header {
         .container {
             width: 95%;
             .row {
-                margin-top: 5rem;
                 gap: 2rem;
                 
                 width: 100%;
@@ -126,7 +118,6 @@ header {
 
 .video-hotel-feu {
     .row {
-        margin-top: 10rem;
         video {
             width: 100%;
             height: 540px;
@@ -134,7 +125,6 @@ header {
         }
 
         @media screen and (max-width: 990px) {
-            margin-top: 5rem;
 
             video {
                 height: 400px;
@@ -145,12 +135,10 @@ header {
 
 .testimonial-hotel-feu {
     .container {
-        width: 75%;
-        margin: auto;
+        @include container-75;
     }
 
     .row {
-        margin-top: 10rem;
         @include d-flex-column-start;
         gap: 3rem;
 
@@ -168,7 +156,7 @@ header {
             width: 90%;
 
             .row {
-                margin-top: 5rem;
+
                 gap: 2rem;
 
                 .container-card {
@@ -183,75 +171,73 @@ header {
 
 .info-hotel-feu {
     .container {
-        width: 75%;
-        margin: auto;
-    }
+        @include container-75;
 
-    .row {
-        margin-top: 10rem;
-        @include d-flex-column-start;
-        gap: 3rem;
-
-        .grid-info {
-
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            width: 100%;
-            
-            div {
+        .row {
+            @include d-flex-column-start;
+            gap: 3rem;
+    
+            .grid-info {
+    
                 display: flex;
-                align-items: center;
-                width: 40%;
-                gap: 1rem;
-                padding-bottom: 1rem;
-
-                img {
-                    width: 30px;
-                }
-
-                .title {
-                    font-weight: bold;
-                }
-
-                .text-double {
-                    @include d-flex;
-                    gap: 0.5rem;
-                    width: 100%;
-
-                    
-
-                    .horraire {
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+                
+                div {
+                    display: flex;
+                    align-items: center;
+                    width: 40%;
+                    gap: 1rem;
+                    padding-bottom: 1rem;
+    
+                    img {
+                        width: 30px;
+                    }
+    
+                    .title {
+                        font-weight: bold;
+                    }
+    
+                    .text-double {
+                        @include d-flex;
+                        gap: 0.5rem;
+                        width: 100%;
+    
+                        
+    
+                        .horraire {
+                            @include d-flex-column-start;
+                            gap: 0.5rem;
+                        }
+                    }
+    
+                    .text {
                         @include d-flex-column-start;
                         gap: 0.5rem;
+                        width: 100%;
                     }
                 }
+            }
 
-                .text {
+            .contact {
+                @include d-flex-column-start;
+                gap: 2rem;
+    
+                .adress-contact {
                     @include d-flex-column-start;
-                    gap: 0.5rem;
-                    width: 100%;
                 }
             }
         }
-
-        .contact {
-            @include d-flex-column-start;
-            gap: 2rem;
-
-            .adress-contact {
-                @include d-flex-column-start;
-            }
-        }
-
     }
+
+    
 
     @media screen and (max-width: 990px) {
         .container {
             width: 90%;
 
             .row {
-                margin-top: 5rem;
                 gap: 2rem;
 
                 .grid-info {
